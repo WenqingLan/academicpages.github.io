@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a 5th year Master Student at the Paul G. Allen Center of Computer Science & Engineering graduating in June 2022. I currently focus on Computer Graphics application design with passions that stem from [CSE 457](https://courses.cs.washington.edu/courses/cse457/). I enjoy creating and visualizing simulated worlds based on real-world mathematics and physics. Here is a artifact I created with my classmate Ru Guo using the animation application developed in this course.
+I am a 5th year Master Student at the [Paul G. Allen Center of Computer Science & Engineering](https://www.cs.washington.edu/) graduating in June 2022. I currently focus on Computer Graphics application design with passions that stem from [CSE 457](https://courses.cs.washington.edu/courses/cse457/). I enjoy creating and visualizing simulated worlds based on real-world mathematics and physics. Here is a artifact I created with my classmate Ru Guo using the animation application developed in this course.
 
 [![Animated Newton's Cradle simulation using the graphics application developed in CSE457.](http://img.youtube.com/vi/iklv-OFxWm8/0.jpg)](http://www.youtube.com/watch?v=iklv-OFxWm8 "Animated Newton's Cradle simulation using the graphics application developed in CSE457.")
 
