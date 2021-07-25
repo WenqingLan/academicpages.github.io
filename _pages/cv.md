@@ -11,16 +11,16 @@ redirect_from:
 
 Last updated on July 8th, 2021.
 
-# Resume
+## Resume
 
 [Resume](https://wenqinglan.github.io/files/Wenqing_Resume.pdf)
 
-# Education
+## Education
 
 - M.S. of Computer Science & Engineering, University of Washington, March 2021 - December 2022 (expected)
 - B.S. of Computer Science (Data Science Option), University of Washington, 2017-2021
 
-# Work experience
+## Work experience
 
 - **Computer Engineering Intern** (Summer 2017)
 
