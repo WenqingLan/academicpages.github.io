@@ -79,7 +79,7 @@ analytics:
 # Site Author
 author:
   name: "Wenqing Lan"
-  avatar: "profile.jpeg"
+  avatar: "profile.jpg"
   bio: "CSE Master Student at University of Washington. <br/>
   Looking for SDE internship of data science, computer graphics, and program management. "
   location: "Seattle, WA"
@@ -101,7 +101,7 @@ author:
   instagram:
   impactstory: #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm:
-  linkedin: "https://www.linkedin.com/in/wenqing-lan/"
+  linkedin: "wenqing-lan"
   orcid:
   pinterest:
   soundcloud:
