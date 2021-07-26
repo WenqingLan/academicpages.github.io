@@ -16,9 +16,33 @@ In addition, lighting and shading using GLSL shaders are added to each teapot.
 ![teapots](/images/portfolio/render_objects.gif)
 <figcaption> Button Model Control, Viewer Position, Viewer Target showed the Model Transform, View Transform, and Projection Transform perspectively. Shading models from left to right. 1. Ambient Light 2. Ambient Light + Diffuse Term 3. Gouraud Shading (previous two + Specular Term) 4. Phong Shading. 5. Phong with Directional Light. </figcaption>
 
-
 ## Stereo Rendering
-details coming soon.
+
+### Foveated rendering
+
+Foveated rendering is implemented to save computational time to render the scene. With our eyes focusing on a point, things far away form the focus are blurred out and we render the scene with advantage of it.
+
+| Standard (no blur) | Foveated |
+| :------: | :------: |
+| ![standard](/images/portfolio/standard.png)| ![foveated_rendering](/images/portfolio/foveated.png)|
+
+<figcaption> The black dot represents the focus. Things are blurred out in ranges of the circle.</figcaption>
+
+### depth-of-field (dof) rendering
+
+Depth-of-field rendering is implemented to create more realistic scenes based on the limited depth of field of human eyes. Every object is blurred differently based on its depth to our eye, so this technique could actually add computational time to the rendering process.
+
+| Focus on the front | Focus on the back |
+| :------: | :------: |
+|![dof_front](/images/portfolio/dof_front.png)  | ![dof_back](/images/portfolio/dof_back.png)|
+
+<figcaption>The black dot represents the focus. You can right click on the image and open it in a new tab to see the bigger picture. </figcaption>
+
+### Anaglyph rendering
+
+Here comes the first 3D rendering result. Different View and Projection Transforms are applied to the left and right eyes. The two renderings are finally rendered in red v.s. green + blue color channels and combined into this Anaglygh picture. Wearing the anaglyph glasses, you will be able to view the 3D result.
+![anaglyphic](/images/portfolio/anaglyphic.png)
+
 
 ## Inertial Measurement Units (IMU) and Pose Tracking
-
+details coming soon.
