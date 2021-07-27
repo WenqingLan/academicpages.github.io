@@ -14,6 +14,7 @@ Through Model Transform, the teapots are scalable and can be moved and rotated a
 In addition, lighting and shading using GLSL shaders are added to each teapot. 
 
 ![teapots](/images/portfolio/render_objects.gif)
+
 <figcaption> Button Model Control, Viewer Position, Viewer Target showed the Model Transform, View Transform, and Projection Transform perspectively. Shading models from left to right. 1. Ambient Light 2. Ambient Light + Diffuse Term 3. Gouraud Shading (previous two + Specular Term) 4. Phong Shading. 5. Phong with Directional Light. </figcaption>
 
 ## Stereo Rendering
@@ -41,8 +42,30 @@ Depth-of-field rendering is implemented to create more realistic scenes based on
 ### Anaglyph rendering
 
 Here comes the first 3D rendering result. Different View and Projection Transforms are applied to the left and right eyes. The two renderings are finally rendered in red v.s. green + blue color channels and combined into this Anaglygh picture. Wearing the anaglyph glasses, you will be able to view the 3D result.
+
 ![anaglyphic](/images/portfolio/anaglyphic.png)
 
+
+### HMD Stereo Rendering
+
+Here we start to render the objects on display in the headset. The screen is separated into two parts side by side and each eye sees one scene through the headset's lenses. To make the objects align well in both eyes and looks realistically 3D, we render the scene based on computations over these parameters: focal length of lenses, lens diameter, interpupillary distance (IPD), distance between lenses and the display, display width, and eye relief.
+
+Here is the effect on the display. 
+
+![anaglyphic](/images/portfolio/without_correction.png)
+
+
+However, due to the optical features of lenses, straight lines on the display will look bended through the lenses. To correct the distortion in our view, the opposite kind of distortion is applied to our rendering. Here is the updated effect.
+
+![anaglyphic](/images/portfolio/with_correction.png)
+
+Below shows the comparison between the distorted view and the corrected result.
+
+| Pincushion distortion | Corrected |
+| :------: | :------: |
+| ![distorted](/images/portfolio/distorted.jpeg) | ![distorted](/images/portfolio/corrected.jpeg) | 
+
+Here we created vivid teapots floating from different distances in front of us. Woohoo!
 
 ## Inertial Measurement Units (IMU) and Pose Tracking
 details coming soon.
