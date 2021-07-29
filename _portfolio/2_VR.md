@@ -68,4 +68,14 @@ Below shows the comparison between the distorted view and the corrected result.
 Here we created vivid teapots floating from different distances in front of us. Woohoo!
 
 ## Inertial Measurement Units (IMU) and Pose Tracking
-details coming soon.
+
+### Gyroscope and Accelerometer based Orientation Tracking
+
+Now we use the IMU and Teensy to sample gyroscope and accelerometer information to compute our head's rotation using quaternion algebra. Sampled data is subject to noise variance and bias due to the environment like temperature and mechanical stress, so we first estimate them and then subtract them from the system. We found that gyroscope values are more subject to variances, while accelerometer values are more subject to biases. To resolve this, we use a complementary filter to combine both gyroscope and accelerometer information to balance out their negative effects.
+
+![imu](/images/portfolio/imu.gif)
+
+You can see it's a little bit shaky. It's because the data is been collected at a high frequency and the transient acceleration contributes too much to the short-term orientation estimate. The performance will be refined with assistance of marker tracking.
+
+### Marker-based Pose Tracking
+
