@@ -75,7 +75,11 @@ Now we use the IMU and Teensy to sample gyroscope and accelerometer information 
 
 ![imu](/images/portfolio/imu.gif)
 
-You can see it's a little bit shaky. It's because the data is been collected at a high frequency and the transient acceleration contributes too much to the short-term orientation estimate. The performance will be refined with assistance of marker tracking.
+You can see it's a little bit shaky. It's because the data is been collected at a high frequency and the transient acceleration contributes too much to the short-term orientation estimate. The performance can be refined by limiting the Teensy's output rate and adjusting the complementary filter's parameter.
 
 ### Marker-based Pose Tracking
+
+Now, we will use the marker-based tracking provided by AR.js to collect position data. A marker tag is created and attached to the front of our AR headset. The position data is collected via the web camera, and the orientation data solely comes from the IMU. By fusing them into our quaternion calculation, here is the achieved result.
+
+![marker](/images/portfolio/marker.gif)
 
