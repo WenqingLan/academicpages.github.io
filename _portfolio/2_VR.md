@@ -75,11 +75,18 @@ Now we use the IMU and Teensy to sample gyroscope and accelerometer information 
 
 ![imu](/images/portfolio/imu.gif)
 
-You can see it's a little bit shaky. It's because the data is been collected at a high frequency and the transient acceleration contributes too much to the short-term orientation estimate. The performance can be refined by limiting the Teensy's output rate and adjusting the complementary filter's parameter.
+You can see the movements are a little bit shaky. It's because the data is been collected at a high frequency and the transient acceleration contributes too much to the short-term orientation estimate. The performance can be refined by limiting the Teensy's output rate and adjusting the complementary filter's parameter. Additionally, we can reduce sensor error by computing the current position based on a weighted combination of the previous position and the raw data's estimation.
 
 ### Marker-based Pose Tracking
 
-Now, we will use the marker-based tracking provided by AR.js to collect position data. A marker tag is created and attached to the front of our AR headset. The position data is collected via the web camera, and the orientation data solely comes from the IMU. By fusing them into our quaternion calculation, here is the achieved result.
+Now, we will use the marker-based tracking provided by AR.js to collect position data. A marker tag is created and attached to the front of our AR headset. The position data is collected via the web camera, and the orientation data solely comes from the IMU. We don't rely on the web camera for rotation data because it has much lower output frequency and possibly more errors due to limited visual information. By fusing the position data into our quaternion calculation, we add a fully functional 6-dof position tracking to our headset.
+ 
+Here is the result. 
 
 ![marker](/images/portfolio/marker.gif)
+
+<figcaption> Compared to the previous result, here the movements become much more smooth and stable. Considering the previous movement in current position estimation helps a lot with reducing sensor errors. </figcaption>
+
+Now we have built up a fully functional head-mounted VR display with distortion-corrected stereoscopic rendering and 6-dof position tracking! So exciting!!
+
 
