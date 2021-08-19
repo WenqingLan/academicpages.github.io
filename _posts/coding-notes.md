@@ -1,6 +1,6 @@
 ---
-title: 'Blog Post number 1'
-date: 2021-6-6
+title: 'Daily Coding Practice'
+date: 2021-06-06
 permalink: /posts/2021/06/coding-notes/
 tags:
   - coding-notes
